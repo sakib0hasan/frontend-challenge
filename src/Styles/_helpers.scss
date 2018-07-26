@@ -1,4 +1,4 @@
-$spaceamounts: (2, 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$spaceamounts: (2, 3, 5, 8, 10, 15, 16, 20, 25, 30, 35, 40, 45, 50, 75, 100);
 $sides: (top, bottom, left, right);
 
 @each $space in $spaceamounts {
@@ -16,15 +16,24 @@ $sides: (top, bottom, left, right);
 // Font sizes
 
 .font-size-18 {
-    font-size: 18px;
+    font-size: 18px !important;
 }
 
 .font-size-12 {
-    font-size: 12px;
+    font-size: 12px !important;
+    line-height: 12px;
+
+
+}
+
+.font-size-14 {
+    font-size: 14px !important;
 }
 
 // Flex
-
+.flex-grow{
+    flex-grow: 1;
+}
 .flex {
     display: flex;
 
