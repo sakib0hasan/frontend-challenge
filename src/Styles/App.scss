@@ -36,7 +36,7 @@ html, body {
     font-weight: bold;
 }
 
-.button{
+.button {
     font-weight: 600;
     cursor: pointer;
     line-height: 20px;
@@ -56,7 +56,7 @@ html, body {
     background-repeat: repeat-x;
     background-position: -1px -1px;
     background-size: 110% 110%;
-    border: 1px solid rgba(27,31,35,0.2);
+    border: 1px solid rgba(27, 31, 35, 0.2);
     border-top-left-radius: 0.25em;
     border-bottom-left-radius: 0.25em;
     -webkit-appearance: none;
@@ -64,14 +64,14 @@ html, body {
     appearance: none;
 }
 
-.button:hover{
+.button:hover {
     background-color: #e6ebf1;
     background-image: linear-gradient(-180deg, #f0f3f6 0%, #e6ebf1 90%);
     background-position: -.5em;
-    border-color: rgba(27,31,35,0.35);
+    border-color: rgba(27, 31, 35, 0.35);
 }
 
-.button-counter{
+.button-counter {
     padding: 3px 10px;
     font-size: 12px;
     font-weight: 600;
@@ -79,12 +79,49 @@ html, body {
     color: #24292e;
     vertical-align: middle;
     background-color: #fff;
-    border: 1px solid rgba(27,31,35,0.2);
+    border: 1px solid rgba(27, 31, 35, 0.2);
     border-left: 0;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.button-counter:hover{
+
+.button-counter:hover {
     color: #0366d6;
     cursor: pointer;
+}
+
+.tabs {
+    position: relative;
+    top: 1px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.tab-item {
+    float: left;
+    padding: 7px 15px 8px;
+    color: #586069;
+    white-space: nowrap;
+    border: solid transparent;
+    border-width: 3px 1px 1px;
+    border-radius: 3px 3px 0 0;
+}
+
+.tab-item-selected {
+    color: #24292e;
+    background-color: #fff;
+    border-color: #e36209 #e1e4e8 white;
+}
+.counter{
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #24292e;
+    background-color: rgba(27,31,35,0.08);
+    border-radius: 20px;
+}
+.icon-black{
+    color: #24292e;
 }
