@@ -62,7 +62,7 @@ class Table extends Component {
                                 </div>
                                 {/* col 3 */}
                                 {
-                                    parseInt(row.comments) > 0 ?
+                                    parseInt(row.comments, 10) > 0 ?
                                         <div className='flex flex-row vertical-center comments-count'><Octicon
                                             name="comment" className='font-size-14 p-r-3 m-t-3'/>
                                             <div className='font-size-12 text-bold text-gray'>{row.comments}</div>

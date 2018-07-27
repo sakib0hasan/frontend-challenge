@@ -10,6 +10,7 @@
     "react-dom": "^16.4.1",
     "react-moment": "^0.7.9",
     "react-octicon": "^3.0.1",
+    "react-paginate": "^5.2.3",
     "react-scripts": "1.1.4"
   },
   "scripts": {
