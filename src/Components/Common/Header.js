@@ -22,9 +22,8 @@ class Header extends Component {
         fetch(`https://api.github.com/repos/facebook/react`)
             .then(result => result.json())
             .then(repo => {
-                console.log(repo);
                 this.setState({repo: repo})
-            })
+            });
     }
 
     render() {
