@@ -236,5 +236,16 @@ html, body {
     background: #fff;
     border: 1px solid #e1e4e8;
 }
+.pagination > .break-me > a {
+    text-decoration: none;
+}
 
-
+.footer {
+    border-top: 1px #e1e4e8 solid !important;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.footer-link{
+    color: #0366d6;
+    cursor: pointer;
+}
