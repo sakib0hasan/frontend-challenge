@@ -4,11 +4,6 @@ import Octicon from 'react-octicon';
 import Moment from 'react-moment';
 
 class Table extends Component {
-    constructor() {
-        super();
-        this.state = {issues: []};
-    }
-
     isTooDark(hexcolor) {
         let r = parseInt(hexcolor.substr(1, 2), 16);
         let g = parseInt(hexcolor.substr(3, 2), 16);
@@ -17,21 +12,12 @@ class Table extends Component {
         return (yiq < 90) ? 'white' : 'black';
     }
 
-    componentDidMount() {
-        fetch(`https://api.github.com/repos/facebook/react/issues?state=open`)
-            .then(result => result.json())
-            .then(items => {
-                console.log(items);
-                this.setState({issues: items})
-            })
-    }
-
     render() {
         return (
             <div>
                 <Sorting/>
                 {
-                    this.state.issues.map(row => {
+                    this.props.issues.map(row => {
                         return (
                             <div className='table-row flex flex-row border-box' key={row.id}>
                                 {/* col 1 */}

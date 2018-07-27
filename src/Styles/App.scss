@@ -246,7 +246,7 @@ html, body {
 .pagination > li {
     position: relative;
     float: left;
-    padding: 7px 12px;
+    padding: 7px 0;
     margin-left: -1px;
     font-size: 13px;
     font-style: normal;
@@ -262,9 +262,19 @@ html, body {
     background: #fff;
     border: 1px solid #e1e4e8;
 }
+.pagination > li > a {
+    padding: 7px 12px;
+}
 
 .pagination > .break-me > a {
     text-decoration: none;
+}
+.pagination > .break-me {
+    color: #d1d5da;
+    cursor: default;
+    background-color: #fafbfc;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .footer {
@@ -329,4 +339,15 @@ html, body {
     background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
     background-position: -.5em;
     border-color: rgba(27,31,35,0.5);
+}
+.pagination > .disabled{
+    color: #d1d5da;
+    cursor: default;
+    background-color: #fafbfc;
+}
+.active{
+    z-index: 3;
+    color: #fff !important;
+    background-color: #0366d6 !important;
+    border-color: #0366d6 !important;
 }

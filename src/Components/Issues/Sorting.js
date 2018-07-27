@@ -46,7 +46,7 @@ class Sorting extends Component {
             <div className='table-header flex flex-row space-between'>
                 <div className='flex flex-row p-l-16'>
                     <div className='stats selected'>
-                        <Octicon name='issue-opened p-r-3' className='icon-black'/>
+                        <Octicon name='issue-opened' className='icon-black p-r-3'/>
                         387 Open
                     </div>
                     <div className='stats m-l-10'>

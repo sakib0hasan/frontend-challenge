@@ -4,30 +4,21 @@ import ReactPaginate from 'react-paginate';
 class Pagination extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            offset: 0
-        }
     }
     handlePageClick = (data) => {
-        let selected = data.selected;
-        let offset = Math.ceil(selected * 30);
-
-        this.setState({offset: offset}, () => {
-            //this.loadCommentsFromServer();
-            console.log(offset);
-        });
+        this.props.onPageChange(data);
     };
     render() {
 
         return (
             <div className="container">
                 <div className='flex flex-row space-around'>
-                    <ReactPaginate previousLabel={"previous"}
-                                   nextLabel={"next"}
-                                   breakLabel={<a href="">...</a>}
+                    <ReactPaginate previousLabel={"Previous"}
+                                   disabledClassName={"disabled"}
+                                   nextLabel={"Next"}
+                                   breakLabel={<span>...</span>}
                                    breakClassName={"break-me"}
-                                   pageCount={this.state.pageCount}
+                                   pageCount={this.props.paginationLinks.lastPageNumber}
                                    marginPagesDisplayed={2}
                                    pageRangeDisplayed={5}
                                    onPageChange={this.handlePageClick}
