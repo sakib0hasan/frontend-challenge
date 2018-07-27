@@ -57,7 +57,7 @@ class Table extends Component {
                                     </div>
                                     <div className='issue-description'>
                                         #{row.number} opened <Moment
-                                        fromNow>{row.created_at}</Moment> by {row.user.login}
+                                        fromNow>{row.created_at}</Moment> by <span className='author'>{row.user.login}</span>
                                     </div>
                                 </div>
                                 {/* col 3 */}
