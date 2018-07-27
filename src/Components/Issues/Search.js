@@ -14,7 +14,7 @@ class Search extends Component {
                             </div>
                         </div>
                         <div className='search'>
-                            <input type="text" value="is:issue is:open "
+                            <input type="text" defaultValue="is:issue is:open "
                                    className="search-input input-contrast"
                                    placeholder="Search all issues" aria-label="Search all issues"/>
 

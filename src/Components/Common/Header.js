@@ -8,14 +8,16 @@ class Header extends Component {
         super();
         this.state = {repo: {}};
     }
-    formatNumber (num) {
-        if(num){
+
+    formatNumber(num) {
+        if (num) {
             num = parseInt(num, 10);
-        }else{
+        } else {
             num = 0;
         }
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
     }
+
     componentDidMount() {
         fetch(`https://api.github.com/repos/facebook/react`)
             .then(result => result.json())
@@ -24,6 +26,7 @@ class Header extends Component {
                 this.setState({repo: repo})
             })
     }
+
     render() {
         return (
             <div className="header m-b-20">
@@ -37,14 +40,13 @@ class Header extends Component {
                         </div>
                     </div>
                     <div className="flex flex-row">
-
                         <StatsBox name='Watch' count={this.formatNumber(this.state.repo.subscribers_count)}/>
                         <StatsBox name='Star' count={this.formatNumber(this.state.repo.stargazers_count)}/>
                         <StatsBox name='Fork' count={this.formatNumber(this.state.repo.forks_count)}/>
                     </div>
                 </div>
                 <div className="container">
-                    <Tabs />
+                    <Tabs/>
                 </div>
             </div>
         );

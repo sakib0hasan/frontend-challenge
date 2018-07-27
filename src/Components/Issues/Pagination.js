@@ -5,9 +5,11 @@ class Pagination extends Component {
     constructor(props) {
         super(props);
     }
+
     handlePageClick = (data) => {
         this.props.onPageChange(data);
     };
+
     render() {
 
         return (
@@ -24,7 +26,7 @@ class Pagination extends Component {
                                    onPageChange={this.handlePageClick}
                                    containerClassName={"pagination"}
                                    subContainerClassName={"pages pagination"}
-                                   activeClassName={"active"} />
+                                   activeClassName={"active"}/>
                 </div>
             </div>
         );

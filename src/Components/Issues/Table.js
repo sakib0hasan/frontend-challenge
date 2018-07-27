@@ -4,6 +4,7 @@ import Octicon from 'react-octicon';
 import Moment from 'react-moment';
 
 class Table extends Component {
+
     isTooDark(hexcolor) {
         let r = parseInt(hexcolor.substr(1, 2), 16);
         let g = parseInt(hexcolor.substr(3, 2), 16);
@@ -43,7 +44,8 @@ class Table extends Component {
                                     </div>
                                     <div className='issue-description'>
                                         #{row.number} opened <Moment
-                                        fromNow>{row.created_at}</Moment> by <span className='author'>{row.user.login}</span>
+                                        fromNow>{row.created_at}</Moment> by <span
+                                        className='author'>{row.user.login}</span>
                                     </div>
                                 </div>
                                 {/* col 3 */}

@@ -43,7 +43,7 @@ class Issues extends Component {
 
 
     componentDidMount() {
-        this.getIssuesByPage(1)
+        this.getIssuesByPage(1);
     }
 
     getIssuesByPage(pageNumber) {

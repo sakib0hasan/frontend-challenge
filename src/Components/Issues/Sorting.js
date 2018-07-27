@@ -4,7 +4,6 @@ import Octicon from 'react-octicon';
 class Sorting extends Component {
     render() {
         let Filters = [
-            //Author, LAbels, Projects, Milestones, Assignee, Sort
             {
                 Name: "Author",
                 Action: () => {
@@ -58,7 +57,8 @@ class Sorting extends Component {
                     {
                         Filters.map(filter => {
                             return (
-                                <div key={filter.Name} className='flex flex-row filter-button vertical-center p-l-15 p-r-15'>
+                                <div key={filter.Name}
+                                     className='flex flex-row filter-button vertical-center p-l-15 p-r-15'>
                                     <div className='p-r-3'>{filter.Name}</div>
                                     <Octicon className='font-size-12' name="triangle-down"/>
                                 </div>
